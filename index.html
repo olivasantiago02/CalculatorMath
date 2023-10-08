@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/calculadora.css">
+    <script src="./JavaScript/main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="calculator">
+        <div id="creator-info">
+            Power By: Santiago Oliva 
+        </div>
+        <button class="toggle-scientific-button" id="toggle-scientific" onclick="toggleScientific()">⌥</button>
+        <div id="calculator-container">
+        <div id="display">
+            <div id="result">0</div>
+            <div id="operation"></div>
+        </div>
+        
+        <button class="clear-button button-calculator" onclick="clearDisplay()">AC</button>
+        <button class="toggle-sign-button button-calculator" onclick="toggleSign()">+/-</button>
+        <button class="percentage-button button-calculator" onclick="applyPercentage()">%</button>
+        <button class="operation-button button-calculator" onclick="appendOperation('/')">/</button>
+        <button class="number-button button-calculator" onclick="appendToDisplay('7')">7</button>
+        <button class="number-button button-calculator" onclick="appendToDisplay('8')">8</button>
+        <button class="number-button button-calculator" onclick="appendToDisplay('9')">9</button>
+        <button class="operation-button button-calculator" onclick="appendOperation('*')">*</button>
+        <button class="number-button button-calculator" onclick="appendToDisplay('4')">4</button>
+        <button class="number-button button-calculator" onclick="appendToDisplay('5')">5</button>
+        <button class="number-button button-calculator" onclick="appendToDisplay('6')">6</button>
+        <button class="operation-button button-calculator" onclick="appendOperation('-')">-</button>
+        <button class="number-button button-calculator" onclick="appendToDisplay('1')">1</button>
+        <button class="number-button button-calculator" onclick="appendToDisplay('2')">2</button>
+        <button class="number-button button-calculator" onclick="appendToDisplay('3')">3</button>
+        <button class="operation-button button-calculator" onclick="appendOperation('+')">+</button>
+        <button class="number-button button-calculator" id="zero-button" onclick="appendToDisplay('0')">0</button>
+        <button class="decimal-button button-calculator" onclick="appendDecimal('.')">.</button>
+        <button class="equals-button button-calculator" onclick="calculate()">=</button>
+    </div>
+    <div id="scientific-panel" class="scientific-panel">
+        <button class="scientific-button button-calculator" onclick="calculateFunction('sin')">sin</button>
+        <button class="scientific-button button-calculator" onclick="calculateFunction('cos')">cos</button>
+        <button class="scientific-button button-calculator" onclick="calculateFunction('tan')">tan</button>
+        <button class="scientific-button button-calculator" onclick="calculateFunction('ln')">ln</button>
+        <button class="scientific-button button-calculator" onclick="calculateFunction('log')">log</button>
+        <button class="scientific-button button-calculator" onclick="calculateFunction('sqrt')">√</button>
+        <button class="scientific-button button-calculator" onclick="calculateFunction('cbrt')">³√</button>
+        <button class="scientific-button button-calculator" onclick="calculateFunction('power')">x^y</button>
+        <button class="scientific-button button-calculator" onclick="calculateFunction('factorial')">n!</button>
+    </div>
+</div>
+</body>
+</html>

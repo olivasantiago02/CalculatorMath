@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#calculator {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 339px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#display {
+    background-color: #444;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#result {
+    font-size: 24px;
+    color: #fff;
+}
+
+#operation {
+    font-size: 18px;
+    color: #ccc;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones de color de fondo y transformación */
+}
+
+.button-calculator {
+    /* Estilos normales de los botones */
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-calculator:hover,
+.button-calculator:focus {
+    /* Estilos cuando se coloca el mouse sobre el botón o se enfoca */
+    background-color: #333;
+    transform: translateY(2px);
+}
+
+.button-calculator:active {
+    /* Estilos cuando se hace clic en el botón */
+    background-color: #444;
+    transform: translateY(0);
+}
+
+.clear-button,
+.toggle-sign-button,
+.percentage-button,
+.equals-button,
+.scientific-button { /* Aplica el mismo estilo a los botones científicos */
+    background-color: #FFA500; /* Amarillo/Anaranjado */
+    color: #fff;
+}
+
+.operation-button,
+.number-button {
+    background-color: #222;
+    color: #fff;
+}
+
+#zero-button {
+    width: 100px;
+}
+
+.decimal-button {
+    width: 50px;
+}
+
+.toggle-scientific-button {
+    background-color: #4CAF50;
+    margin-bottom: 9px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+#calculator-container {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden; /* Oculta el contenido que se desborda al expandirse */
+}
+
+#scientific-panel {
+    display: none;
+    background-color: #333;
+    border-radius: 0px;
+    padding: 20px;
+    margin-bottom: 30px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 0px 0px 10px rgb(27, 27, 27);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden; /* Oculta el contenido que se desborda al expandirse */
+}
+
+#creator-info {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+    color: #ccc;
+}
+
+/* Define los estilos para el panel científico */
+.scientific-panel {
+    display: none;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 0; /* Inicialmente, el ancho es 0 */
+    overflow: hidden; /* Oculta cualquier contenido que supere el ancho */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: width 0.5s ease; /* Aplica una transición suave al cambiar el ancho */
+}
+
+.scientific-panel.active {
+    width: 300px; /* Cambia el ancho a tu preferencia */
+    display: block; /* Muestra el contenido */
+}
+
+/* Estilos para dispositivos móviles (ancho máximo de 480px) */
+@media (max-width: 480px) {
+    body {
+        height: auto; /* Cambia la altura automática para permitir el desplazamiento en dispositivos móviles */
+    }
+
+    #calculator {
+        width: 340px; /* Aprovecha el ancho completo de la pantalla en dispositivos móviles */
+        padding: 10px; /* Reduce el espacio de relleno en dispositivos móviles */
+    }
+
+    /* Ajusta los estilos de los botones y otros elementos según sea necesario para dispositivos móviles */
+    button {
+        width: 50px; /* Cambia el tamaño de los botones para dispositivos móviles */
+        height: 50px;
+        font-size: 16px;
+    }
+}
