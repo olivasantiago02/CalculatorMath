@@ -12,9 +12,11 @@ body {
     background-color: #333;
     border-radius: 10px;
     padding: 20px;
-    width: 339px;
+    width: 100%;
+    max-width: 340px; /* Cambia el valor según tus necesidades */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
+
 
 #display {
     background-color: #444;
@@ -158,21 +160,31 @@ button {
     display: block; /* Muestra el contenido */
 }
 
-/* Estilos para dispositivos móviles (ancho máximo de 480px) */
-@media (max-width: 480px) {
-    body {
-        height: auto; /* Cambia la altura automática para permitir el desplazamiento en dispositivos móviles */
-    }
+@media (max-width: 768px) {
+    /* Estilos específicos para dispositivos móviles aquí */
 
     #calculator {
-        width: 340px; /* Aprovecha el ancho completo de la pantalla en dispositivos móviles */
-        padding: 10px; /* Reduce el espacio de relleno en dispositivos móviles */
+        width: 100%; /* Cambia el ancho a la pantalla completa */
+        max-width: none; 
+        max-height: 100%;/* Elimina el ancho máximo para que se ajuste a la pantalla */
     }
 
-    /* Ajusta los estilos de los botones y otros elementos según sea necesario para dispositivos móviles */
-    button {
-        width: 50px; /* Cambia el tamaño de los botones para dispositivos móviles */
-        height: 50px;
-        font-size: 16px;
+    /* Ajustar el tamaño de fuente para dispositivos móviles */
+    #result {
+        font-size: 18px;
     }
+
+    #operation {
+        font-size: 14px;
+    }
+
+    /* Ajustar el tamaño de los botones para dispositivos móviles */
+    button {
+        width: 25%; /* Cambia el ancho de los botones según tus necesidades */
+        height: 40px; /* Ajusta la altura de los botones */
+        font-size: 14px; /* Ajusta el tamaño de fuente de los botones */
+        margin: 2px;
+    }
+
+    /* Resto de los estilos específicos para dispositivos móviles... */
 }
